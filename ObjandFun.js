@@ -39,7 +39,7 @@ melek.presentation();
 aymen.city(aymen.profession)(aymen.name);
 melek.city(melek.profession)(melek.name);*/
 
-let isMyCarPolished = (c) => {
+/*let isMyCarPolished = (c) => {
     switch (c) {
         case 'Pink' :
             console.log('that pinky pinky bro');
@@ -87,4 +87,54 @@ console.log('----------');
 orka.city;
 rika.city;
 orka.mover(orka.name,orka.city)('HollyNi88a');
-rika.mover(rika.name,rika.city)('MasterWood');
+rika.mover(rika.name,rika.city)('MasterWood');*/
+
+function InterviewQuestion(job) {
+    let a,b,c;
+    a = ' Can you explain what UX design is?';
+    b = ' What subject do you teach?';
+    c = ' What is your main job?';
+    switch(job) {
+        case 'Designer' :
+            return function (name) {
+                console.log('Hi, ' + name + a);
+            }
+            break;
+        case 'Teacher' :
+            return function (name) {
+                console.log('Hello, ' + name + b);
+            }
+            break;
+        default :
+            return function (name) {
+                console.log('Salut, ' + name + c);
+            }
+    }
+}
+
+let designer = InterviewQuestion('Designer');
+let teacher = InterviewQuestion('Teacher');
+let anything = InterviewQuestion('Software Engineer');
+
+
+anything('Ranoun');
+designer('Melek');
+teacher('Aymen');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
