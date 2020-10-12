@@ -89,7 +89,7 @@ rika.city;
 orka.mover(orka.name,orka.city)('HollyNi88a');
 rika.mover(rika.name,rika.city)('MasterWood');*/
 
-function InterviewQuestion(job) {
+/*function InterviewQuestion(job) {
     let a,b,c;
     a = ' Can you explain what UX design is?';
     b = ' What subject do you teach?';
@@ -119,9 +119,28 @@ let anything = InterviewQuestion('Software Engineer');
 
 anything('Ranoun');
 designer('Melek');
-teacher('Aymen');
+teacher('Aymen');*/
 
 
+let Person = function (name,age,position) {
+    this.name = name;
+    this.age = age;
+    this.position = position;
+}
+
+
+let john = new Person('John',18,'Designer');
+let emily = new Person('Emily', 21, 'Computer Scientist');
+
+Person.prototype.showPosition = function (erp,years) {
+    console.log(this.name +' is working for the company '+erp+' for '+years+' years.');
+}
+
+john.showPosition('Libertex',10);
+john.showPosition.call(emily,'WorkSpace', 11);
+john.showPosition.apply(emily,['tolal',20]);
+let showPosYears = john.showPosition.bind(john,'Libertex');
+showPosYears(15);
 
 
 
